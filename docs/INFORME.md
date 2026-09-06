@@ -18,16 +18,16 @@ Elegí este tema porque creo que me ayudará a comprender mejor las estructuras 
 
 Un ítem del catálogo representa un Pokémon. Cada Pokémon tiene los campos id, nombre, tipo1, tipo2, hp, ataque, defensa, velocidad y generación.
 
-En la Entrega 1, cada Pokémon se representará mediante un diccionario. El catálogo será una lista que contendrá todos los diccionarios cargados desde `data/pokedex.csv`.
+En la Entrega 1, cada Pokémon se representa mediante un diccionario. Los diccionarios están guardados manualmente dentro de la lista `CATALOGO` del archivo `src/dominio/pokemon.py`. Los archivos de `data/` se empezarán a leer recién en la Entrega 5.
 
-La lista del catálogo y los diccionarios son mutables porque permiten agregar, eliminar o modificar elementos. Los números enteros y las cadenas de texto son inmutables: cuando cambia uno de esos valores, Python lo reemplaza por otro.
+La lista del catálogo y sus diccionarios son mutables porque permiten agregar, eliminar o modificar elementos. Los números enteros y las cadenas de texto son inmutables: cuando cambia uno de esos valores, Python lo reemplaza por otro.
 
 En entregas posteriores, la colección principal será el equipo de Pokémon. El historial se implementará mediante una pila y los turnos de combate mediante una cola.
 
 Lista inicial del modelo:
 
-- Pokémon: un ítem cargado desde el CSV.
-- Catálogo: colección de todos los Pokémon.
+- Pokémon: un ítem representado mediante un diccionario.
+- Catálogo: lista que contiene todos los Pokémon.
 - Equipo: colección principal, con un máximo de seis Pokémon.
 - Historial: pila de acciones.
 - Turnos de combate: cola de Pokémon.
