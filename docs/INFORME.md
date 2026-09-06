@@ -9,7 +9,7 @@ Completar y hacer crecer en cada entrega. No hace falta prosa larga: oraciones c
 
 Elegí el tema Pokédex porque me pareció claro y fácil de relacionar con un catálogo.
 Cada Pokémon se puede representar mediante diferentes datos, como su número, nombre y tipo.
-Esto permite practicar la lectura y organización de información desde un archivo CSV.
+Esto permite practicar la organización de información dentro de un catálogo.
 También me resulta sencillo entender que la Pokédex contiene una colección de Pokémon.
 Durante las próximas entregas se podrán agregar búsquedas, ordenamientos y evoluciones.
 Elegí este tema porque creo que me ayudará a comprender mejor las estructuras de datos.
