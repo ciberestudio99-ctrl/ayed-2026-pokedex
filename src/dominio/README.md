@@ -1,3 +1,7 @@
-Clases del dominio (Pokemon, Receta, Cancion, Pokédex, LibroDeRecetas, Biblioteca, etc.).
+# Dominio de la Pokédex
 
-Una clase por archivo. El CLI no debería conocer los detalles internos.
+- `pokemon.py`: clase `Pokemon`.
+- `pokedex.py`: clase `Pokedex`, catálogo y recursión de evoluciones.
+- `datos_pokedex.py`: datos iniciales escritos en el código para E2.
+
+El menú usa los métodos del dominio y no modifica directamente sus datos.

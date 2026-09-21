@@ -18,26 +18,41 @@ Elegí este tema porque creo que me ayudará a comprender mejor las estructuras 
 
 Un ítem del catálogo representa un Pokémon. Cada Pokémon tiene los campos id, nombre, tipo1, tipo2, hp, ataque, defensa, velocidad y generación.
 
-En la Entrega 1, cada Pokémon se representa mediante un diccionario. Los diccionarios están guardados manualmente dentro de la lista `CATALOGO` del archivo `src/dominio/pokemon.py`. Los archivos de `data/` se empezarán a leer recién en la Entrega 5.
+En la Entrega 2, cada Pokémon es un objeto de la clase `Pokemon`, ubicada en `src/dominio/pokemon.py`. La clase `Pokedex`, ubicada en `src/dominio/pokedex.py`, administra la lista de objetos, el listado, la búsqueda por número y las cadenas evolutivas. Los datos iniciales y las relaciones de evolución están en `src/dominio/datos_pokedex.py`. Los archivos de `data/` se empezarán a leer recién en la Entrega 5.
 
-La lista del catálogo y sus diccionarios son mutables porque permiten agregar, eliminar o modificar elementos. Los números enteros y las cadenas de texto son inmutables: cuando cambia uno de esos valores, Python lo reemplaza por otro.
+La lista del catálogo y los objetos son mutables porque permiten agregar, eliminar o modificar elementos. Los números enteros y las cadenas de texto son inmutables: cuando cambia uno de esos valores, Python lo reemplaza por otro.
 
 En entregas posteriores, la colección principal será el equipo de Pokémon. El historial se implementará mediante una pila y los turnos de combate mediante una cola.
 
 Lista inicial del modelo:
 
-- Pokémon: un ítem representado mediante un diccionario.
-- Catálogo: lista que contiene todos los Pokémon.
+- Pokémon: objeto que representa un ítem del catálogo.
+- Pokédex: objeto que administra la lista de Pokémon y sus evoluciones.
+- Catálogo: lista que contiene objetos `Pokemon`.
 - Equipo: colección principal, con un máximo de seis Pokémon.
 - Historial: pila de acciones.
 - Turnos de combate: cola de Pokémon.
 
 ## 3. Recursión (E2)
 
-- Función:
-- Caso base:
-- Caso recursivo:
-- Traza de un ejemplo real del dataset:
+- Función: `Pokedex._construir_cadenas(pokemon_id)`.
+- Caso base: si el Pokémon no tiene evoluciones siguientes, devuelve una lista que contiene una única cadena con ese Pokémon: `[[pokemon]]`.
+- Caso recursivo: para cada evolución siguiente, la función se llama a sí misma. Después agrega el Pokémon actual al comienzo de cada cadena obtenida.
+- Resultado: devuelve una lista de caminos. Esto permite representar también las tres evoluciones posibles de Eevee.
+
+### Traza: Bulbasaur (número 1)
+
+1. `_construir_cadenas(1)` encuentra a Bulbasaur y su siguiente evolución, el número 2.
+2. Llama a `_construir_cadenas(2)`, que encuentra a Ivysaur y llama al número 3.
+3. `_construir_cadenas(3)` encuentra a Venusaur. Como no tiene una evolución siguiente, se cumple el caso base y devuelve `[[Venusaur]]`.
+4. La llamada del número 2 antepone a Ivysaur y devuelve `[[Ivysaur, Venusaur]]`.
+5. La llamada del número 1 antepone a Bulbasaur y devuelve `[[Bulbasaur, Ivysaur, Venusaur]]`.
+
+La salida mostrada en el menú es:
+
+```text
+Bulbasaur -> Ivysaur -> Venusaur
+```
 
 ## 4. TADs (E3)
 

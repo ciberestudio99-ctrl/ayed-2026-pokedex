@@ -22,6 +22,13 @@ En Windows, si `python` no anda: `py -3 -m src.main`.
 
 Solo biblioteca estándar. No hay `requirements.txt` a propósito.
 
+## Funcionalidad disponible hasta E2
+
+- Listado del catálogo completo.
+- Detalle de un Pokémon por número.
+- Objetos `Pokemon` administrados por la clase `Pokedex`.
+- Cadena de evoluciones recursiva, incluyendo ramificaciones como Eevee.
+
 ## Entregas
 
 Cada vencimiento se marca con un tag. Ver `GIT.md`.
